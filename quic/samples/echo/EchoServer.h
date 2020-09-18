@@ -48,7 +48,7 @@ class EchoServerTransportFactory : public quic::QuicServerTransportFactory {
     auto transport = quic::QuicServerTransport::make(
         evb, std::move(sock), *echoHandler, ctx);
     echoHandler->setQuicSocket(transport);
-    echoHandlers_.push_back(std::move(echoHandler));
+    echoHandlers_.emplace_back(std::move(echoHandler));
     return transport;
   }
 
