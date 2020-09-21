@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmvfst_bufutil.a  CMakeFiles/mvfst_bufutil.dir/BufUtil.cpp.o
+/usr/bin/ranlib libmvfst_bufutil.a

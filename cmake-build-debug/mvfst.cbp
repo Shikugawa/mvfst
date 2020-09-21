@@ -1,0 +1,2430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="mvfst"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\build\;CMake Files\build\fbcode_builder\;CMake Files\build\fbcode_builder\CMake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\;CMake Files\..\..\..\..\usr\local\lib\cmake\folly\;CMake Files\..\..\..\..\usr\local\lib\cmake\fizz\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\;CMake Files\cmake\;CMake Files\quic\;CMake Files\quic\api\;CMake Files\quic\api\test\;CMake Files\quic\client\;CMake Files\quic\client\test\;CMake Files\quic\codec\;CMake Files\quic\codec\test\;CMake Files\quic\common\;CMake Files\quic\common\test\;CMake Files\quic\congestion_control\;CMake Files\quic\congestion_control\test\;CMake Files\quic\congestion_control\third_party\;CMake Files\quic\congestion_control\third_party\ccp\;CMake Files\quic\fizz\;CMake Files\quic\fizz\client\;CMake Files\quic\fizz\client\test\;CMake Files\quic\fizz\client\handshake\;CMake Files\quic\fizz\client\handshake\test\;CMake Files\quic\fizz\handshake\;CMake Files\quic\fizz\handshake\test\;CMake Files\quic\flowcontrol\;CMake Files\quic\flowcontrol\test\;CMake Files\quic\handshake\;CMake Files\quic\happyeyeballs\;CMake Files\quic\logging\;CMake Files\quic\logging\test\;CMake Files\quic\loss\;CMake Files\quic\loss\test\;CMake Files\quic\samples\;CMake Files\quic\server\;CMake Files\quic\server\test\;CMake Files\quic\server\handshake\;CMake Files\quic\server\handshake\test\;CMake Files\quic\state\;CMake Files\quic\state\test\;CMake Files\quic\state\stream\;CMake Files\quic\state\stream\test\;CMake Files\quic\tools\;CMake Files\quic\tools\tperf\;CMake Files\quic\d6d\;CMake Files\quic\d6d\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_constants">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/libmvfst_constants.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 mvfst_constants"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_constants/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/libmvfst_constants.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 mvfst_constants/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_exception">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/libmvfst_exception.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 mvfst_exception"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_exception/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/libmvfst_exception.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 mvfst_exception/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_transport">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/libmvfst_transport.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/Makefile&quot;  VERBOSE=1 mvfst_transport"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_transport/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/libmvfst_transport.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/Makefile&quot;  VERBOSE=1 mvfst_transport/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/api/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_client">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/libmvfst_client.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/Makefile&quot;  VERBOSE=1 mvfst_client"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_client/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/libmvfst_client.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/Makefile&quot;  VERBOSE=1 mvfst_client/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_packet_number_cipher">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_packet_number_cipher.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_packet_number_cipher"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_packet_number_cipher/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_packet_number_cipher.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_packet_number_cipher/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_pktbuilder">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_pktbuilder.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_pktbuilder"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_pktbuilder/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_pktbuilder.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_pktbuilder/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_pktrebuilder">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_pktrebuilder.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_pktrebuilder"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_pktrebuilder/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_pktrebuilder.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_pktrebuilder/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_types">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_types.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_types"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_types/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_types.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_types/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_decode">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_decode.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_decode"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_codec_decode/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/libmvfst_codec_decode.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 mvfst_codec_decode/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/codec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_looper">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/libmvfst_looper.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 mvfst_looper"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_looper/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/libmvfst_looper.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 mvfst_looper/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_buf_accessor">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/libmvfst_buf_accessor.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 mvfst_buf_accessor"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_buf_accessor/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/libmvfst_buf_accessor.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 mvfst_buf_accessor/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_bufutil">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/libmvfst_bufutil.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 mvfst_bufutil"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_bufutil/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/libmvfst_bufutil.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 mvfst_bufutil/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_socketutil">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/libmvfst_socketutil.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 mvfst_socketutil"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_socketutil/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/libmvfst_socketutil.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 mvfst_socketutil/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/common/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_cc_algo">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/libmvfst_cc_algo.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/Makefile&quot;  VERBOSE=1 mvfst_cc_algo"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_cc_algo/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/libmvfst_cc_algo.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/Makefile&quot;  VERBOSE=1 mvfst_cc_algo/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/congestion_control/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_fizz_client">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/libmvfst_fizz_client.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/Makefile&quot;  VERBOSE=1 mvfst_fizz_client"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_fizz_client/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/libmvfst_fizz_client.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/Makefile&quot;  VERBOSE=1 mvfst_fizz_client/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/client/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_fizz_handshake">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/libmvfst_fizz_handshake.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/Makefile&quot;  VERBOSE=1 mvfst_fizz_handshake"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_fizz_handshake/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/libmvfst_fizz_handshake.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/Makefile&quot;  VERBOSE=1 mvfst_fizz_handshake/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/fizz/handshake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_flowcontrol">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/libmvfst_flowcontrol.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/Makefile&quot;  VERBOSE=1 mvfst_flowcontrol"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_flowcontrol/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/libmvfst_flowcontrol.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/Makefile&quot;  VERBOSE=1 mvfst_flowcontrol/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/flowcontrol/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_handshake">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/libmvfst_handshake.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/Makefile&quot;  VERBOSE=1 mvfst_handshake"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_handshake/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/libmvfst_handshake.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/Makefile&quot;  VERBOSE=1 mvfst_handshake/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/handshake/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_happyeyeballs">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/libmvfst_happyeyeballs.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/Makefile&quot;  VERBOSE=1 mvfst_happyeyeballs"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_happyeyeballs/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/libmvfst_happyeyeballs.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/Makefile&quot;  VERBOSE=1 mvfst_happyeyeballs/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/happyeyeballs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_qlogger">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/libmvfst_qlogger.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/Makefile&quot;  VERBOSE=1 mvfst_qlogger"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_qlogger/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/libmvfst_qlogger.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/Makefile&quot;  VERBOSE=1 mvfst_qlogger/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/logging/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_loss">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/libmvfst_loss.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/Makefile&quot;  VERBOSE=1 mvfst_loss"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_loss/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/libmvfst_loss.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/Makefile&quot;  VERBOSE=1 mvfst_loss/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/loss/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_server">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/libmvfst_server.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/Makefile&quot;  VERBOSE=1 mvfst_server"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_server/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/libmvfst_server.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/Makefile&quot;  VERBOSE=1 mvfst_server/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/server/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_stream_functions">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_stream_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_stream_functions"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_stream_functions/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_stream_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_stream_functions/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_ack_handler">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_ack_handler.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_ack_handler"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_ack_handler/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_ack_handler.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_ack_handler/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_machine">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_machine.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_machine"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_machine/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_machine.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_machine/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_qpr_functions">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_qpr_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_qpr_functions"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_qpr_functions/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_qpr_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_qpr_functions/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_functions">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_functions"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_functions/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_functions/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_pacing_functions">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_pacing_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_pacing_functions"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_pacing_functions/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_pacing_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_pacing_functions/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_stream">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_stream.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_stream"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_stream/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_stream.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_stream/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_simple_frame_functions">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_simple_frame_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_simple_frame_functions"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mvfst_state_simple_frame_functions/fast">
+				<Option output="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/libmvfst_state_simple_frame_functions.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-DFMT_LOCALE"/>
+					<Add option="-DGFLAGS_IS_A_DLL=0"/>
+					<Add directory="/home/shikugawa/dev/shikugawa-mvfst"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/home/shikugawa/dev/mvfst/_build/deps/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/backward"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/llvm/lib/clang/10.0.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 mvfst_state_simple_frame_functions/fast"/>
+					<CompileFile command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j32 -f &quot;/home/shikugawa/dev/shikugawa-mvfst/cmake-build-debug/quic/state/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/QuicConstants.cpp">
+			<Option target="mvfst_constants"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/QuicConstants.h">
+			<Option target="mvfst_constants"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/QuicException.cpp">
+			<Option target="mvfst_exception"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/QuicException.h">
+			<Option target="mvfst_exception"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/IoBufQuicBatch.cpp">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/IoBufQuicBatch.h">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicBatchWriter.cpp">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicBatchWriter.h">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicPacketScheduler.cpp">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicPacketScheduler.h">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicSocket.cpp">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicSocket.h">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicStreamAsyncTransport.cpp">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicStreamAsyncTransport.h">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicTransportBase.cpp">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicTransportBase.h">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicTransportFunctions.cpp">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/QuicTransportFunctions.h">
+			<Option target="mvfst_transport"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/client/QuicClientTransport.cpp">
+			<Option target="mvfst_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/client/QuicClientTransport.h">
+			<Option target="mvfst_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/client/handshake/ClientHandshake.cpp">
+			<Option target="mvfst_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/client/handshake/ClientHandshake.h">
+			<Option target="mvfst_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/client/state/ClientStateMachine.cpp">
+			<Option target="mvfst_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/client/state/ClientStateMachine.h">
+			<Option target="mvfst_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/Decode.cpp">
+			<Option target="mvfst_codec_decode"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/Decode.h">
+			<Option target="mvfst_codec_decode"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/DefaultConnectionIdAlgo.cpp">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/DefaultConnectionIdAlgo.h">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/PacketNumber.cpp">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/PacketNumber.h">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/PacketNumberCipher.cpp">
+			<Option target="mvfst_codec_packet_number_cipher"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/PacketNumberCipher.h">
+			<Option target="mvfst_codec_packet_number_cipher"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicConnectionId.cpp">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicConnectionId.h">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicHeaderCodec.cpp">
+			<Option target="mvfst_codec"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicHeaderCodec.h">
+			<Option target="mvfst_codec"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicInteger.cpp">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicInteger.h">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicPacketBuilder.cpp">
+			<Option target="mvfst_codec_pktbuilder"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicPacketBuilder.h">
+			<Option target="mvfst_codec_pktbuilder"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicPacketRebuilder.cpp">
+			<Option target="mvfst_codec_pktrebuilder"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicPacketRebuilder.h">
+			<Option target="mvfst_codec_pktrebuilder"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicReadCodec.cpp">
+			<Option target="mvfst_codec"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicReadCodec.h">
+			<Option target="mvfst_codec"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicWriteCodec.cpp">
+			<Option target="mvfst_codec"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/QuicWriteCodec.h">
+			<Option target="mvfst_codec"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/Types.cpp">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/Types.h">
+			<Option target="mvfst_codec_types"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/BufAccessor.cpp">
+			<Option target="mvfst_buf_accessor"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/BufAccessor.h">
+			<Option target="mvfst_buf_accessor"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/BufUtil.cpp">
+			<Option target="mvfst_bufutil"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/BufUtil.h">
+			<Option target="mvfst_bufutil"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/FunctionLooper.cpp">
+			<Option target="mvfst_looper"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/FunctionLooper.h">
+			<Option target="mvfst_looper"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/SocketUtil.cpp">
+			<Option target="mvfst_socketutil"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/SocketUtil.h">
+			<Option target="mvfst_socketutil"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/Timers.cpp">
+			<Option target="mvfst_looper"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/Timers.h">
+			<Option target="mvfst_looper"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/Bandwidth.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/Bandwidth.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/Bbr.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/Bbr.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/BbrBandwidthSampler.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/BbrBandwidthSampler.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/BbrRttSampler.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/BbrRttSampler.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/CongestionControlFunctions.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/CongestionControlFunctions.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/CongestionControllerFactory.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/CongestionControllerFactory.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/Copa.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/Copa.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/NewReno.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/NewReno.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/Pacer.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/Pacer.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/QuicCCP.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/QuicCCP.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/QuicCubic.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/QuicCubic.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/ServerCongestionControllerFactory.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/ServerCongestionControllerFactory.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/TokenlessPacer.cpp">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/TokenlessPacer.h">
+			<Option target="mvfst_cc_algo"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/client/handshake/FizzClientHandshake.cpp">
+			<Option target="mvfst_fizz_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/client/handshake/FizzClientHandshake.h">
+			<Option target="mvfst_fizz_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/client/handshake/FizzClientQuicHandshakeContext.cpp">
+			<Option target="mvfst_fizz_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/client/handshake/FizzClientQuicHandshakeContext.h">
+			<Option target="mvfst_fizz_client"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/FizzBridge.cpp">
+			<Option target="mvfst_fizz_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/FizzBridge.h">
+			<Option target="mvfst_fizz_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/FizzCryptoFactory.cpp">
+			<Option target="mvfst_fizz_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/FizzCryptoFactory.h">
+			<Option target="mvfst_fizz_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/FizzPacketNumberCipher.cpp">
+			<Option target="mvfst_fizz_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/FizzPacketNumberCipher.h">
+			<Option target="mvfst_fizz_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/QuicFizzFactory.cpp">
+			<Option target="mvfst_fizz_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/QuicFizzFactory.h">
+			<Option target="mvfst_fizz_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/server/handshake/FizzServerHandshake.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/server/handshake/FizzServerHandshake.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/server/handshake/FizzServerQuicHandshakeContext.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/server/handshake/FizzServerQuicHandshakeContext.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/flowcontrol/QuicFlowController.cpp">
+			<Option target="mvfst_flowcontrol"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/flowcontrol/QuicFlowController.h">
+			<Option target="mvfst_flowcontrol"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/handshake/CryptoFactory.cpp">
+			<Option target="mvfst_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/handshake/CryptoFactory.h">
+			<Option target="mvfst_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/handshake/HandshakeLayer.cpp">
+			<Option target="mvfst_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/handshake/HandshakeLayer.h">
+			<Option target="mvfst_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/handshake/TransportParameters.cpp">
+			<Option target="mvfst_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/handshake/TransportParameters.h">
+			<Option target="mvfst_handshake"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/happyeyeballs/QuicHappyEyeballsFunctions.cpp">
+			<Option target="mvfst_happyeyeballs"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/happyeyeballs/QuicHappyEyeballsFunctions.h">
+			<Option target="mvfst_happyeyeballs"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/BaseQLogger.cpp">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/BaseQLogger.h">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/FileQLogger.cpp">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/FileQLogger.h">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/QLogger.cpp">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/QLogger.h">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/QLoggerConstants.cpp">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/QLoggerConstants.h">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/QLoggerTypes.cpp">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/QLoggerTypes.h">
+			<Option target="mvfst_qlogger"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/loss/QuicLossFunctions.cpp">
+			<Option target="mvfst_loss"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/loss/QuicLossFunctions.h">
+			<Option target="mvfst_loss"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/CCPReader.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/CCPReader.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServer.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServer.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServerBackend.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServerPacketRouter.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServerPacketRouter.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServerTransport.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServerTransport.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServerWorker.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/QuicServerWorker.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/SlidingWindowRateLimiter.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/SlidingWindowRateLimiter.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/AppToken.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/AppToken.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/DefaultAppTokenValidator.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/DefaultAppTokenValidator.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/ServerHandshake.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/ServerHandshake.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/StatelessResetGenerator.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/StatelessResetGenerator.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/state/ServerStateMachine.cpp">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/state/ServerStateMachine.h">
+			<Option target="mvfst_server"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/AckHandlers.cpp">
+			<Option target="mvfst_state_ack_handler"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/AckHandlers.h">
+			<Option target="mvfst_state_ack_handler"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/PacketEvent.cpp">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/PacketEvent.h">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/PendingPathRateLimiter.cpp">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/PendingPathRateLimiter.h">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QPRFunctions.cpp">
+			<Option target="mvfst_state_qpr_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QPRFunctions.h">
+			<Option target="mvfst_state_qpr_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicPacingFunctions.cpp">
+			<Option target="mvfst_state_pacing_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicPacingFunctions.h">
+			<Option target="mvfst_state_pacing_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicStateFunctions.cpp">
+			<Option target="mvfst_state_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicStateFunctions.h">
+			<Option target="mvfst_state_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicStreamFunctions.cpp">
+			<Option target="mvfst_state_stream_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicStreamFunctions.h">
+			<Option target="mvfst_state_stream_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicStreamManager.cpp">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicStreamManager.h">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicStreamUtilities.cpp">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/QuicStreamUtilities.h">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/SimpleFrameFunctions.cpp">
+			<Option target="mvfst_state_simple_frame_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/SimpleFrameFunctions.h">
+			<Option target="mvfst_state_simple_frame_functions"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/StateData.cpp">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/StateData.h">
+			<Option target="mvfst_state_machine"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/stream/StreamReceiveHandlers.cpp">
+			<Option target="mvfst_state_stream"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/stream/StreamReceiveHandlers.h">
+			<Option target="mvfst_state_stream"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/stream/StreamSendHandlers.cpp">
+			<Option target="mvfst_state_stream"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/stream/StreamSendHandlers.h">
+			<Option target="mvfst_state_stream"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/stream/StreamStateFunctions.cpp">
+			<Option target="mvfst_state_stream"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/stream/StreamStateFunctions.h">
+			<Option target="mvfst_state_stream"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/build/fbcode_builder/CMake/FBBuildOptions.cmake">
+			<Option virtualFolder="CMake Files\build\fbcode_builder\CMake\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/fmt/fmt-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/fmt/fmt-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/fmt/fmt-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/fmt/fmt-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/folly/folly-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\folly\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/folly/folly-targets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\folly\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/folly/folly-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\folly\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/fizz/fizz-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fizz\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/fizz/fizz-targets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fizz\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/local/lib/cmake/fizz/fizz-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fizz\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/lib/x86_64-linux-gnu/cmake/gflags/gflags-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/lib/x86_64-linux-gnu/cmake/gflags/gflags-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/lib/x86_64-linux-gnu/cmake/gflags/gflags-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/../../../../usr/lib/x86_64-linux-gnu/cmake/gflags/gflags-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gflags\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/cmake/FindGlog.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/cmake/mvfst-config.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\api\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/api/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\api\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\client\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/client/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\client\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\codec\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/codec/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\codec\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\common\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/common/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\common\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\congestion_control\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\congestion_control\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/congestion_control/third_party/ccp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\congestion_control\third_party\ccp\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\fizz\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/client/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\fizz\client\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/client/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\fizz\client\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/client/handshake/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\fizz\client\handshake\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\fizz\handshake\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/fizz/handshake/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\fizz\handshake\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/flowcontrol/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\flowcontrol\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/flowcontrol/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\flowcontrol\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/handshake/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\handshake\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/happyeyeballs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\happyeyeballs\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\logging\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/logging/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\logging\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/loss/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\loss\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/loss/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\loss\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/samples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\samples\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\server\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\server\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/server/handshake/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\server\handshake\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\state\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\state\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/state/stream/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\state\stream\test\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\tools\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/tools/tperf/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\tools\tperf\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/d6d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\d6d\"/>
+		</Unit>
+		<Unit filename="/home/shikugawa/dev/shikugawa-mvfst/quic/d6d/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\quic\d6d\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

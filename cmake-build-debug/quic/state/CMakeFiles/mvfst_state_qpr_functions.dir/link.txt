@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmvfst_state_qpr_functions.a  CMakeFiles/mvfst_state_qpr_functions.dir/QPRFunctions.cpp.o
+/usr/bin/ranlib libmvfst_state_qpr_functions.a
