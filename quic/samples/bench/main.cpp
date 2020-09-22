@@ -9,77 +9,32 @@
 
 #include <memory>
 #include <vector>
-#include <cassert>
+#include <chrono>
 
 #include <spdlog/spdlog.h>
 #include <folly/io/async/EventBase.h>
 #include <folly/portability/GFlags.h>
 #include <fizz/crypto/Utils.h>
-#include <quic/QuicConstants.h>
+#include <quic/fizz/client/handshake/FizzClientQuicHandshakeContext.h>
 #include <quic/api/QuicSocket.h>
-#include <quic/codec/Types.h>
 #include <quic/server/QuicServer.h>
 #include <quic/server/QuicServerTransport.h>
 #include <quic/common/test/TestUtils.h>
+
+#include "BenchServerHandler.h"
+#include "BenchClient.h"
 
 static std::shared_ptr<spdlog::logger> logger = spdlog::stdout_color_mt("console");
 
 #define INFO(x) logger->info(x)
 #define ERROR(x) logger->error(x)
 
-class QuicBenchServerHandler : public quic::QuicSocket::ConnectionCallback {
-public:
-  QuicBenchServerHandler(folly::EventBase* ev) : ev_(ev) {}
-
-  // quic::QuicSocket::ConnectionCallback
-  void onNewBidirectionalStream(quic::StreamId id) noexcept override;
-  void onNewUnidirectionalStream(quic::StreamId id) noexcept override;
-  void onStopSending(quic::StreamId id, quic::ApplicationErrorCode error) noexcept override;
-  void onConnectionEnd() noexcept override;
-  void onConnectionError(
-        std::pair<quic::QuicErrorCode, std::string> code) noexcept override;
-
-  folly::EventBase* getEventBase() {
-    return ev_;
-  }
-
-  void setQuicSocket(std::shared_ptr<quic::QuicSocket> sock) {
-    assert(sock_ == nullptr);
-    sock_ = sock;
-  }
-
-private:
-  folly::EventBase* ev_;
-  std::shared_ptr<quic::QuicSocket> sock_;
-};
-
-using QuicBenchServerHandlerPtr = std::unique_ptr<QuicBenchServerHandler>;
-
-void QuicBenchServerHandler::onNewBidirectionalStream(quic::StreamId id) noexcept {
-  INFO("new bidi stream");
-}
-
-void QuicBenchServerHandler::onNewUnidirectionalStream(quic::StreamId id) noexcept {
-  INFO("new uni stream");
-}
-
-void QuicBenchServerHandler::onStopSending(quic::StreamId id, quic::ApplicationErrorCode error) noexcept {
-  INFO("stop send");
-}
-
-void QuicBenchServerHandler::onConnectionEnd() noexcept {
-  INFO("conn end");
-}
-
-void QuicBenchServerHandler::onConnectionError(
-        std::pair<quic::QuicErrorCode, std::string> code) noexcept {
-  INFO("on conn error");
-}
+using QuicBenchServerHandlerPtr = std::unique_ptr<quic::samples::BenchServerHandler>;
 
 // Handle established connection handler.
 class QuicBenchTransportFactory : public quic::QuicServerTransportFactory {
 public:
-  QuicBenchTransportFactory() = default;
+  QuicBenchTransportFactory(int32_t duration);
 
   ~QuicBenchTransportFactory() override;
 
@@ -92,7 +47,11 @@ public:
 
 private:
   std::vector<QuicBenchServerHandlerPtr> handlers_;
+  int32_t duration_;
 };
+
+QuicBenchTransportFactory::QuicBenchTransportFactory(int32_t duration)
+  : duration_(duration) {}
 
 QuicBenchTransportFactory::~QuicBenchTransportFactory() noexcept {
   while (!handlers_.empty()) {
@@ -108,7 +67,7 @@ quic::QuicServerTransport::Ptr QuicBenchTransportFactory::make(
         const folly::SocketAddress &,
         std::shared_ptr<const fizz::server::FizzServerContext> ctx) noexcept {
   CHECK_EQ(evb, sock->getEventBase());
-  auto handler = std::make_unique<QuicBenchServerHandler>(evb);
+  auto handler = std::make_unique<quic::samples::BenchServerHandler>(evb, duration_);
   auto transport = quic::QuicServerTransport::make(
           evb, std::move(sock), *handler, ctx);
   handler->setQuicSocket(transport);
@@ -118,7 +77,7 @@ quic::QuicServerTransport::Ptr QuicBenchTransportFactory::make(
 
 class QuicBenchServer {
 public:
-  QuicBenchServer(std::string& host, uint32_t port);
+  QuicBenchServer(std::string& host, uint32_t port, int32_t duration);
 
   void run();
 
@@ -129,9 +88,9 @@ private:
   std::shared_ptr<quic::QuicServer> server_;
 };
 
-QuicBenchServer::QuicBenchServer(std::string &host, uint32_t port)
+QuicBenchServer::QuicBenchServer(std::string &host, uint32_t port, int32_t duration)
   : host_(host), port_(port), server_(quic::QuicServer::createQuicServer()) {
-  server_->setQuicServerTransportFactory(std::make_unique<QuicBenchTransportFactory>());
+  server_->setQuicServerTransportFactory(std::make_unique<QuicBenchTransportFactory>(duration));
   auto ctx = quic::test::createServerCtx();
   server_->setFizzContext(ctx);
 }
@@ -146,6 +105,8 @@ void QuicBenchServer::run() {
 
 DEFINE_string(host, "::1", "Echo server hostname/IP");
 DEFINE_int32(port, 6666, "Echo server port");
+DEFINE_int32(psize, 100 /* 100 MB */, "Packet size per stream write");
+DEFINE_int32(duration, 10 /* 10sec */, "duration");
 DEFINE_string(mode, "server", "Mode to run in: 'client' or 'server'");
 
 int main(int argc, char* argv[]) {
@@ -153,8 +114,10 @@ int main(int argc, char* argv[]) {
   fizz::CryptoUtils::init();
 
   if (FLAGS_mode == "server") {
-    QuicBenchServer(FLAGS_host, FLAGS_port).run();
+    QuicBenchServer(FLAGS_host, FLAGS_port, FLAGS_duration).run();
   } else if (FLAGS_mode == "client") {
+    auto p = quic::samples::BenchClient(FLAGS_host, FLAGS_port);
+    p.start(FLAGS_psize, FLAGS_duration);
   } else {
     ERROR("Invalid mode");
     return -1;

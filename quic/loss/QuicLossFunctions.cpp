@@ -49,9 +49,9 @@ void onPTOAlarm(QuicConnectionStateBase& conn) {
         conn.outstandings.numOutstanding(),
         kPtoAlarm);
   }
-  if (conn.lossState.ptoCount == conn.transportSettings.maxNumPTOs) {
-    throw QuicInternalException("Exceeded max PTO", LocalErrorCode::NO_ERROR);
-  }
+//  if (conn.lossState.ptoCount == conn.transportSettings.maxNumPTOs) {
+//    throw QuicInternalException("Exceeded max PTO", LocalErrorCode::NO_ERROR);
+//  }
 
   // If there is only one packet outstanding, no point to clone it twice in the
   // same write loop.
