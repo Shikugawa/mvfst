@@ -11,7 +11,6 @@
 #include <vector>
 #include <chrono>
 
-#include <spdlog/spdlog.h>
 #include <folly/io/async/EventBase.h>
 #include <folly/portability/GFlags.h>
 #include <fizz/crypto/Utils.h>
@@ -23,11 +22,6 @@
 
 #include "BenchServerHandler.h"
 #include "BenchClient.h"
-
-static std::shared_ptr<spdlog::logger> logger = spdlog::stdout_color_mt("console");
-
-#define INFO(x) logger->info(x)
-#define ERROR(x) logger->error(x)
 
 using QuicBenchServerHandlerPtr = std::unique_ptr<quic::samples::BenchServerHandler>;
 
@@ -99,7 +93,7 @@ void QuicBenchServer::run() {
   folly::SocketAddress addr(host_.c_str(), port_);
   addr.setFromHostPort(host_, port_);
   server_->start(addr, 0);
-  INFO("QUIC Bench server started...");
+  LOG(INFO) << "QUIC Bench server started...";
   ev_.loopForever();
 }
 
@@ -119,7 +113,7 @@ int main(int argc, char* argv[]) {
     auto p = quic::samples::BenchClient(FLAGS_host, FLAGS_port);
     p.start(FLAGS_psize, FLAGS_duration);
   } else {
-    ERROR("Invalid mode");
+    LOG(ERROR) << "Invalid mode";
     return -1;
   }
 

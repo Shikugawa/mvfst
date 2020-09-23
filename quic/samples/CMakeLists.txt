@@ -18,10 +18,7 @@ foreach(header ${QUIC_API_HEADERS_TOINSTALL})
   install(FILES ${header} DESTINATION include/quic/samples/${header_dir})
 endforeach()
 
-find_package(spdlog REQUIRED)
-
 add_executable(bench bench/main.cpp)
-target_include_directories(bench PRIVATE ${spdlog_INCLUDE_PATH})
 
 target_compile_options(
   bench
@@ -32,6 +29,5 @@ target_compile_options(
 target_link_libraries(
   bench
   mvfst_test_utils
-  ${spdlog_LIBRARY_PATH}
   ${GFLAGS_LIBRARIES}
 )
