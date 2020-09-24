@@ -29,6 +29,8 @@ namespace samples {
 class BenchClient : public quic::QuicSocket::ConnectionCallback,
                     public quic::QuicSocket::WriteCallback {
  public:
+  static constexpr uint32_t block_size_ = 8192;
+
   BenchClient(
       const std::string& host,
       uint16_t port,
@@ -208,10 +210,14 @@ void BenchClient::sendMessage(quic::StreamId id, uint64_t maxToSend) {
 }
 
 std::unique_ptr<folly::IOBuf> BenchClient::makeBuffer(uint64_t size) {
-  std::string message;
-  for (auto i = 0; i < size; ++i)
-    message += 'x';
-  return folly::IOBuf::copyBuffer(message);
+  auto buf = folly::IOBuf::createChain(size, block_size_);
+  auto buf_ptr = buf.get();
+  do {
+    buf_ptr->append(buf_ptr->capacity());
+    buf_ptr = buf_ptr->next();
+    // IOBufChainは最後のバッファの次ポインタが先頭を指している
+  } while (buf_ptr != buf.get());
+  return buf;
 }
 
 } // namespace samples
