@@ -115,22 +115,22 @@ class BenchClient : public quic::QuicSocket::ConnectionCallback,
         &evb_, std::move(sock), std::move(fizzClientContext));
     quicClient_->setHostname("tperf");
     quicClient_->addNewPeerAddress(addr);
-    quicClient_->setCongestionControllerFactory(
-        std::make_shared<DefaultCongestionControllerFactory>());
+//    quicClient_->setCongestionControllerFactory(
+//        std::make_shared<DefaultCongestionControllerFactory>());
     auto settings = quicClient_->getTransportSettings();
     //              settings.advertisedInitialUniStreamWindowSize = window_;
 
-    settings.advertisedInitialConnectionWindowSize =
-        std::numeric_limits<uint32_t>::max();
-    settings.connectUDP = true;
-    settings.shouldRecvBatch = true;
+//    settings.advertisedInitialConnectionWindowSize =
+//        std::numeric_limits<uint32_t>::max();
+//    settings.connectUDP = true;
+//    settings.shouldRecvBatch = true;
 
     if (gso_) {
       settings.batchingMode = QuicBatchingMode::BATCHING_MODE_GSO;
       settings.maxBatchSize = 16;
     }
 
-    settings.canIgnorePathMTU = true;
+//    settings.canIgnorePathMTU = true;
     quicClient_->setTransportSettings(settings);
 
     LOG(INFO) << "TPerfClient connecting to " << addr.describe();
