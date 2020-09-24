@@ -9,11 +9,11 @@
 
 #pragma once
 
+#include <cmath>
+#include <iomanip>
 #include <iostream>
 #include <string>
 #include <thread>
-#include <boost/thread.hpp>
-#include <iomanip>
 
 #include <glog/logging.h>
 
@@ -28,149 +28,173 @@
 #include <quic/samples/echo/LogQuicStats.h>
 
 namespace quic {
-    namespace samples {
-        class BenchClient : public quic::QuicSocket::ConnectionCallback,
-                           public quic::QuicSocket::WriteCallback,
-                           public quic::QuicSocket::DataExpiredCallback {
-        public:
-            BenchClient(const std::string& host, uint16_t port)
-                    : host_(host), port_(port) {}
+namespace samples {
+class BenchClient : public quic::QuicSocket::ConnectionCallback,
+                    public quic::QuicSocket::WriteCallback {
+ public:
+  BenchClient(
+      const std::string& host,
+      uint16_t port,
+      uint32_t max_stream_size,
+      uint32_t max_bytes_per_stream,
+      bool gso)
+      : host_(host),
+        port_(port),
+        max_stream_size_(max_stream_size),
+        max_bytes_per_stream_(max_bytes_per_stream),
+        gso_(gso) {
+    evb_.setName("bench");
+  }
 
-            void onNewBidirectionalStream(quic::StreamId id) noexcept override {
-              LOG(INFO) << "EchoClient: new bidirectional stream=" << id;
-            }
+  void onNewBidirectionalStream(quic::StreamId id) noexcept override {
+    LOG(INFO) << "BenchClient: new bidirectional stream=" << id;
+  }
 
-            void onNewUnidirectionalStream(quic::StreamId id) noexcept override {
-              LOG(INFO) << "EchoClient: new unidirectional stream=" << id;
-            }
+  void onNewUnidirectionalStream(quic::StreamId id) noexcept override {
+    LOG(INFO) << "BenchClient: new unidirectional stream=" << id;
+  }
 
-            void onStopSending(
-                    quic::StreamId id,
-                    quic::ApplicationErrorCode /*error*/) noexcept override {
-              VLOG(10) << "EchoClient got StopSending stream id=" << id;
-            }
+  void onStopSending(
+      quic::StreamId id,
+      quic::ApplicationErrorCode /*error*/) noexcept override {
+    VLOG(10) << "BenchClient got StopSending stream id=" << id;
+  }
 
-            void onConnectionEnd() noexcept override {
-              LOG(INFO) << "EchoClient connection end";
-            }
+  void onConnectionEnd() noexcept override {
+    LOG(INFO) << "BenchClient connection end";
+  }
 
-            void onConnectionError(
-                    std::pair<quic::QuicErrorCode, std::string> error) noexcept override {
-              LOG(INFO) << "EchoClient error: " << toString(error.first);
-              startDone_.post();
-            }
+  void onConnectionError(
+      std::pair<quic::QuicErrorCode, std::string> error) noexcept override {
+    LOG(INFO) << "BenchClient error: " << toString(error.first);
+  }
 
-            void onTransportReady() noexcept override {
-              startDone_.post();
-            }
+  void onTransportReady() noexcept override {
+    LOG(INFO) << "transport ready";
+    for (auto i = 0; i < max_stream_size_; ++i) {
+      createUnidirectionalStream();
+    }
+  }
 
-            void onStreamWriteReady(
-                    quic::StreamId id,
-                    uint64_t maxToSend) noexcept override {
-              LOG(INFO) << "EchoClient socket is write ready with maxToSend="
-                        << maxToSend;
-              sendMessage(id, pendingOutput_[id]);
-            }
+  void createUnidirectionalStream() {
+    if (quicClient_ == nullptr) {
+      return;
+    }
+    auto id = quicClient_->createUnidirectionalStream().value();
+    sent_bytes_per_stream_[id] = 0;
+    evb_.runInEventBaseThread([&, id]() {
+      auto res = quicClient_->notifyPendingWriteOnStream(id, this);
+      if (res.hasError()) {
+        LOG(FATAL) << quic::toString(res.error());
+      }
+    });
+  }
 
-            void onStreamWriteError(
-                    quic::StreamId id,
-                    std::pair<quic::QuicErrorCode, folly::Optional<folly::StringPiece>>
-                    error) noexcept override {
-              LOG(INFO) << "EchoClient write error with stream=" << id
-                         << " error=" << toString(error);
-            }
+  void onStreamWriteReady(quic::StreamId id, uint64_t maxToSend) noexcept
+      override {
+    sendMessage(id, maxToSend);
+  }
 
-            void onDataExpired(StreamId streamId, uint64_t newOffset) noexcept override {
-              LOG(INFO) << "Client received skipData; "
-                        << newOffset - recvOffsets_[streamId]
-                        << " bytes skipped on stream=" << streamId;
-            }
+  void onStreamWriteError(
+      quic::StreamId id,
+      std::pair<quic::QuicErrorCode, folly::Optional<folly::StringPiece>>
+          error) noexcept override {
+    LOG(INFO) << "EchoClient write error with stream=" << id
+              << " error=" << toString(error);
+  }
 
-            void start(int32_t psize, int32_t duration) {
-              folly::ScopedEventBaseThread networkThread("EchoClientThread");
-              evb_ = networkThread.getEventBase();
-              folly::SocketAddress addr(host_.c_str(), port_);
+  void start() {
+    folly::SocketAddress addr(host_.c_str(), port_);
 
-              evb_->runInEventBaseThreadAndWait([&] {
-                auto sock = std::make_unique<folly::AsyncUDPSocket>(evb_);
-                auto fizzClientContext =
-                        FizzClientQuicHandshakeContext::Builder()
-                                .setCertificateVerifier(
-                                        test::createTestCertificateVerifier())
-                                .build();
-                quicClient_ = std::make_shared<quic::QuicClientTransport>(
-                        evb_, std::move(sock), std::move(fizzClientContext));
-                quicClient_->setHostname("echo.com");
-                quicClient_->addNewPeerAddress(addr);
+    auto sock = std::make_unique<folly::AsyncUDPSocket>(&evb_);
+    auto fizzClientContext =
+        FizzClientQuicHandshakeContext::Builder()
+            .setCertificateVerifier(test::createTestCertificateVerifier())
+            .build();
+    quicClient_ = std::make_shared<quic::QuicClientTransport>(
+        &evb_, std::move(sock), std::move(fizzClientContext));
+    quicClient_->setHostname("tperf");
+    quicClient_->addNewPeerAddress(addr);
+    quicClient_->setCongestionControllerFactory(
+        std::make_shared<DefaultCongestionControllerFactory>());
+    auto settings = quicClient_->getTransportSettings();
+    //              settings.advertisedInitialUniStreamWindowSize = window_;
 
-                TransportSettings settings;
-                quicClient_->setTransportSettings(settings);
+    settings.advertisedInitialConnectionWindowSize =
+        std::numeric_limits<uint32_t>::max();
+    settings.connectUDP = true;
+    settings.shouldRecvBatch = true;
 
-                LOG(INFO) << "EchoClient connecting to " << addr.describe();
-                quicClient_->start(this);
-              });
+    if (gso_) {
+      settings.batchingMode = QuicBatchingMode::BATCHING_MODE_GSO;
+      settings.maxBatchSize = 16;
+    }
 
-              startDone_.wait();
+    settings.canIgnorePathMTU = true;
+    quicClient_->setTransportSettings(settings);
 
-              std::string message;
-              const uint64_t base = 100000;
-              for (auto i = 0; i < base * psize; ++i)
-                message += 'x';
+    LOG(INFO) << "TPerfClient connecting to " << addr.describe();
+    quicClient_->start(this);
+    evb_.loopForever();
+  }
 
-              auto connection_start = std::chrono::system_clock::now();
-              auto conn_expires_at =
-                      connection_start + std::chrono::seconds(duration);
+  ~BenchClient() override {
+    evb_.terminateLoopSoon();
+  }
 
-              while (std::chrono::system_clock::now() <= conn_expires_at) {
-                auto start = std::chrono::system_clock::now();
-                auto expires_at = start + std::chrono::seconds(1);
+ private:
+  void sendMessage(quic::StreamId id, uint64_t maxToSend) {
+    auto maybe_send_bytes = std::min<uint64_t>(
+        maxToSend, max_bytes_per_stream_ - sent_bytes_per_stream_[id]);
+    sent_bytes_per_stream_[id] += maybe_send_bytes;
+    auto buf = makeBuffer(maybe_send_bytes);
+    bool eof = false;
 
-                auto client = quicClient_;
-                auto streamId = client->createUnidirectionalStream().value();
-                evb_->runImmediatelyOrRunInEventBaseThreadAndWait([&] {
-                  pendingOutput_[streamId].append(
-                          folly::IOBuf::copyBuffer(message));
-                  sendMessage(streamId, pendingOutput_[streamId]);
-                });
+    if (sent_bytes_per_stream_[id] >= max_bytes_per_stream_) {
+      eof = true;
+    }
 
-                LOG(INFO) << "Sent: " << (stats_.sent_bytes_ / 100000) / 1000
-                          << " GBytes";
-                boost::this_thread::sleep(
-                        boost::posix_time::milliseconds(100));
-              }
-            }
+    auto res = quicClient_->writeChain(id, std::move(buf), eof, true);
+    if (res.hasError()) {
+      LOG(ERROR) << "EchoClient writeChain error=" << uint32_t(res.error());
+    }
 
-            ~BenchClient() override {
-              if (evb_->isRunning())
-                evb_->terminateLoopSoon();
-            }
+    if (eof) {
+      sent_bytes_per_stream_.erase(id);
+      createUnidirectionalStream();
+    } else {
+      evb_.runInEventBaseThread([&, id]() {
+        auto res = quicClient_->notifyPendingWriteOnStream(id, this);
+        if (res.hasError()) {
+          LOG(FATAL) << quic::toString(res.error());
+        }
+      });
+    }
+  }
 
-        private:
-            void sendMessage(quic::StreamId id, BufQueue& data) {
-              auto message = data.move();
-              auto res = quicClient_->writeChain(id, message->clone(), true, false);
-              if (res.hasError()) {
-                LOG(ERROR) << "EchoClient writeChain error=" << uint32_t(res.error());
-              } else {
-                auto str = message->moveToFbString().toStdString();
-                stats_.sent_bytes_ += str.size();
-                // sent whole message
-                pendingOutput_.erase(id);
-              }
-            }
+  std::unique_ptr<folly::IOBuf> makeBuffer(uint64_t size) {
+    std::string message;
+    for (auto i = 0; i < size; ++i)
+      message += 'x';
+    return folly::IOBuf::copyBuffer(message);
+  }
 
-            struct PerConnClientStats {
-              double sent_bytes_;
-            };
+  struct PerConnClientStats {
+    double sent_bytes_;
+    int32_t current_stream_size_ = 0;
+  };
 
-            PerConnClientStats stats_;
-            std::string host_;
-            uint16_t port_;
-            std::shared_ptr<quic::QuicClientTransport> quicClient_;
-            std::map<quic::StreamId, BufQueue> pendingOutput_;
-            std::map<quic::StreamId, uint64_t> recvOffsets_;
-            folly::fibers::Baton startDone_;
-            folly::EventBase* evb_;
-        };
-    } // namespace samples
+  PerConnClientStats stats_;
+  std::string host_;
+  uint16_t port_;
+  std::shared_ptr<quic::QuicClientTransport> quicClient_;
+  std::map<quic::StreamId, BufQueue> pendingOutput_;
+  std::map<quic::StreamId, uint64_t> recvOffsets_;
+  folly::EventBase evb_;
+  uint32_t max_stream_size_;
+  uint32_t max_bytes_per_stream_;
+  bool gso_;
+  std::map<quic::StreamId, uint32_t> sent_bytes_per_stream_;
+};
+} // namespace samples
 } // namespace quic

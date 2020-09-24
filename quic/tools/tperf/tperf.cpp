@@ -28,17 +28,17 @@ DEFINE_string(host, "::1", "TPerf server hostname/IP");
 DEFINE_int32(port, 6666, "TPerf server port");
 DEFINE_string(mode, "server", "Mode to run in: 'client' or 'server'");
 DEFINE_int32(duration, 10, "Duration of test in seconds");
-DEFINE_uint64(
+DEFINE_int64(
     block_size,
     4096,
     "Amount of data written to stream each iteration");
-DEFINE_uint64(writes_per_loop, 5, "Amount of socket writes per event loop");
-DEFINE_uint64(window, 64 * 1024, "Flow control window size");
+DEFINE_int64(writes_per_loop, 5, "Amount of socket writes per event loop");
+DEFINE_int64(window, 64 * 1024, "Flow control window size");
 DEFINE_string(congestion, "newreno", "newreno/cubic/bbr/ccp/none");
 DEFINE_string(ccp_config, "", "Additional args to pass to ccp");
 DEFINE_bool(pacing, false, "Enable pacing");
 DEFINE_bool(gso, false, "Enable GSO writes to the socket");
-DEFINE_uint32(
+DEFINE_int32(
     client_transport_timer_resolution_ms,
     1,
     "Timer resolution for Ack and Loss tiemout in client transport");
@@ -47,12 +47,12 @@ DEFINE_string(
     "",
     "Path to the directory where qlog files will be written. File will be named"
     " as <CID>.qlog where CID is the DCID from client's perspective.");
-DEFINE_uint32(
+DEFINE_int32(
     max_cwnd_mss,
     quic::kLargeMaxCwndInMss,
     "Max cwnd in the unit of mss");
-DEFINE_uint32(num_streams, 1, "Number of streams to send on simultaneously");
-DEFINE_uint64(
+DEFINE_int32(num_streams, 1, "Number of streams to send on simultaneously");
+DEFINE_int64(
     bytes_per_stream,
     0,
     "Maximum number of bytes per stream. "
@@ -61,7 +61,7 @@ DEFINE_string(
     pacing_observer,
     "none",
     "none/time/rtt/ack: Pacing observer bucket type: per 3ms, per rtt or per ack");
-DEFINE_uint32(
+DEFINE_int32(
     max_receive_packet_size,
     std::max(
         quic::kDefaultV4UDPSendPacketLen,
@@ -69,10 +69,7 @@ DEFINE_uint32(
     "Maximum packet size to advertise to the peer.");
 DEFINE_bool(use_inplace_write, false, "Data path type");
 DEFINE_double(latency_factor, 0.5, "Latency factor (delta) for Copa");
-DEFINE_uint32(
-    num_server_worker,
-    1,
-    "Max number of mvfst server worker threads");
+DEFINE_int32(num_server_worker, 1, "Max number of mvfst server worker threads");
 
 namespace quic {
 namespace tperf {
@@ -169,9 +166,8 @@ class ServerStreamHandler : public quic::QuicSocket::ConnectionCallback,
     // resetStream
   }
 
-  void onStreamWriteReady(
-      quic::StreamId id,
-      uint64_t maxToSend) noexcept override {
+  void onStreamWriteReady(quic::StreamId id, uint64_t maxToSend) noexcept
+      override {
     bool eof = false;
     uint64_t toSend = maxToSend;
     if (maxBytesPerStream_ > 0) {
@@ -237,8 +233,8 @@ class TPerfServerTransportFactory : public quic::QuicServerTransportFactory {
       folly::EventBase* evb,
       std::unique_ptr<folly::AsyncUDPSocket> sock,
       const folly::SocketAddress&,
-      std::shared_ptr<const fizz::server::FizzServerContext>
-          ctx) noexcept override {
+      std::shared_ptr<const fizz::server::FizzServerContext> ctx) noexcept
+      override {
     CHECK_EQ(evb, sock->getEventBase());
     auto serverHandler = std::make_unique<ServerStreamHandler>(
         evb, blockSize_, numStreams_, maxBytesPerStream_);
@@ -460,9 +456,8 @@ class TPerfClient : public quic::QuicSocket::ConnectionCallback,
     eventBase_.terminateLoopSoon();
   }
 
-  void onStreamWriteReady(
-      quic::StreamId id,
-      uint64_t maxToSend) noexcept override {
+  void onStreamWriteReady(quic::StreamId id, uint64_t maxToSend) noexcept
+      override {
     LOG(INFO) << "TPerfClient stream" << id
               << " is write ready with maxToSend=" << maxToSend;
   }
@@ -526,9 +521,10 @@ class TPerfClient : public quic::QuicSocket::ConnectionCallback,
   uint64_t receivedBytes_{0};
   uint64_t receivedStreams_{0};
   std::map<quic::StreamId, uint64_t> bytesPerStream_;
-  folly::Histogram<uint64_t> bytesPerStreamHistogram_{1024,
-                                                      0,
-                                                      1024 * 1024 * 1024};
+  folly::Histogram<uint64_t> bytesPerStreamHistogram_{
+      1024,
+      0,
+      1024 * 1024 * 1024};
   std::chrono::seconds duration_;
   uint64_t window_;
   bool gso_;
