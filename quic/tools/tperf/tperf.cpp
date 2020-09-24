@@ -69,7 +69,10 @@ DEFINE_int32(
     "Maximum packet size to advertise to the peer.");
 DEFINE_bool(use_inplace_write, false, "Data path type");
 DEFINE_double(latency_factor, 0.5, "Latency factor (delta) for Copa");
-DEFINE_int32(num_server_worker, 1, "Max number of mvfst server worker threads");
+DEFINE_int32(
+    num_server_worker,
+    1,
+    "Max number of mvfst server worker threads");
 
 namespace quic {
 namespace tperf {
