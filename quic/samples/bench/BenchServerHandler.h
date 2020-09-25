@@ -82,7 +82,7 @@ void BenchServerHandler::onNewBidirectionalStream(quic::StreamId) noexcept {
 }
 
 void BenchServerHandler::onNewUnidirectionalStream(quic::StreamId id) noexcept {
-  LOG(INFO) << "Got unidirectional stream id=" << id;
+  VLOG(5) << "Got unidirectional stream id=" << id;
   sock_->setReadCallback(id, this);
 }
 
@@ -117,7 +117,7 @@ void BenchServerHandler::readAvailable(quic::StreamId id) noexcept {
   input_bytes_[id] += data->length();
   if (eof) {
     stats_.received_bytes_ += input_bytes_[id];
-    LOG(INFO) << "\nStats: \n"
+    VLOG(5) << "\nStats: \n"
               << "\ttotal received bytes: "
               << stats_.received_bytes_ / std::pow(10, 9) << " GBytes";
   }
